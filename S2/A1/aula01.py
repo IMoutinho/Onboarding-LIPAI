@@ -1,5 +1,5 @@
 """ Aula 01 - Introdução ao Python"""
-print('olá mundo!')
+print('Olá mundo!')
 
 
 def somar(numero_01, numero_02):
