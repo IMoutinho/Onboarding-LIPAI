@@ -7,5 +7,6 @@ def soma_tupla(tupla):
         acumula += valores
     return acumula
 
-numeros=(1,2,3,4,6)
+
+numeros = (1, 2, 3, 4, 6)
 print(soma_tupla(numeros))
