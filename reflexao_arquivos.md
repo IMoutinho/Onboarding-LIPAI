@@ -7,5 +7,6 @@ Como o dicionário trabalha com chaves e essas chaves podem ser usadas para aces
 Quando quero que os registros/dados permaneçam inalterados posso utilizar uma tupla. 
 ---
 **● O que você achou mais desafiador: ler o arquivo ou transformar as linhas em estruturas de dados (dicionários)?**
+
 Achei o processo de transformar linhas em estruturas de dados mais difícil porém somente até compreender o processo. Após saber como é feito para tratar de uma forma, se torna intuitivo. 
 ---
