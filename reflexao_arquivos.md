@@ -1,4 +1,5 @@
 **● Qual a vantagem de transformar cada linha do arquivo em dicionários em vez de trabalhar apenas com strings?**
+
 Como o dicionário trabalha com chaves e essas chaves podem ser usadas para acessar o conteúdo presente é mais fácil se utilizar um dicionário do que uma string que necessitaria ser acessada através da posição.
 ---
 
