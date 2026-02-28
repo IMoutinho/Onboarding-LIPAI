@@ -47,21 +47,25 @@ print(f"5. b) Precisão: {precisao:.2f}")
 # c) recall
 recall = tp/(tp+fn)
 print(f"5. c) Recall: {recall:.2f}")
-#d) especificidade
+# d) especificidade
 especificidade = tn/(tn+fp)
 print(f"5. d) Especificidade: {especificidade:.2f}")
 
-#6. Encontre as 5 imagens com benign com menor prob_benign. O que isso pode indicar? 
-menor_benign = df[df['real_class'] == 'benign'].sort_values(by='prob_benign').head()
-print("\n6. Imagens benign com menor probabilidade de benign: \n", menor_benign[['image_path', 'prob_benign']])
-#O que isso pode indicar:
-#Pode indicar que o modelo está com dificuldades em identificar as caracteristicas que diferenciem os dois modelos e, dado
-#a porcentagem das ultimas imagens, pode indicar que o modelo com mais facilidade classifica imagens como malignas. O que é 
-#validado pela proxima questão.
+# 6. Encontre as 5 imagens com benign com menor prob_benign. O que isso pode indicar?
+menor_benign = df[df['real_class'] == 'benign'].sort_values(
+    by='prob_benign').head()
+print("\n6. Imagens benign com menor probabilidade de benign: \n",
+      menor_benign[['image_path', 'prob_benign']])
+# O que isso pode indicar:
+# Pode indicar que o modelo está com dificuldades em identificar as caracteristicas que diferenciem os dois modelos e, dado
+# a porcentagem das ultimas imagens, pode indicar que o modelo com mais facilidade classifica imagens como malignas. O que é
+# validado pela proxima questão.
 
-#7. Encontre as 5 imagens com malign com maior probabilidade de benigno. O que isso pode indicar? 
-maior_benign_malign = df[df['real_class'] == 'malign'].sort_values(by='prob_benign', ascending=False).head()
-print("\n7. Imagens malign com maior probabilidade de benigno: \n", maior_benign_malign[['image_path', 'prob_benign']])
-#O que isso pode indicar:
-#Pode indicar que o modelo não está refinando bem o suficiente as caracteristicas que distinguem os dois. 
-#Se classifica imagens malignas como benignas é um erro mais grave, levando a um falso negativo.
+# 7. Encontre as 5 imagens com malign com maior probabilidade de benigno. O que isso pode indicar?
+maior_benign_malign = df[df['real_class'] == 'malign'].sort_values(
+    by='prob_benign', ascending=False).head()
+print("\n7. Imagens malign com maior probabilidade de benigno: \n",
+      maior_benign_malign[['image_path', 'prob_benign']])
+# O que isso pode indicar:
+# Pode indicar que o modelo não está refinando bem o suficiente as caracteristicas que distinguem os dois.
+# Se classifica imagens malignas como benignas é um erro mais grave, levando a um falso negativo.
