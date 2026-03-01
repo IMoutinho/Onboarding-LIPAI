@@ -9,6 +9,7 @@ plt.figure(figsize=(10, 6))
 
 plt.subplot(1,2,1)
 plt.plot(lista_epocas, df['train_acc'], label='Train Acc', color='blue')
+
 plt.plot(lista_epocas, df['val_acc'], label='Validation Acc', color='orange')
 plt.title('Accuracy')
 plt.xlabel('Epochs')
