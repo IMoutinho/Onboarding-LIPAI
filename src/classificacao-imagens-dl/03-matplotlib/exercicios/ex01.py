@@ -6,7 +6,7 @@ import numpy as np
 df = pd.read_csv(
     './src/classificacao-imagens-dl/02-pandas/dataset/classification_results_trial_0001.csv')
 
-plt.style.use("seaborn-v0_8-dark-palette")
+plt.style.use("ggplot")
 
 df['acerto'] = df['real_class'] == df['predicted_class']
 
