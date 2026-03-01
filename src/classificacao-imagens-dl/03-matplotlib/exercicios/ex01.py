@@ -86,16 +86,15 @@ axes[2, 0].legend()
 # 6
 erros_tipo = df[df['tipo_erro'] != 'Acerto']['tipo_erro'].value_counts()
 
-if not erros_tipo.empty:
-    axes[2, 1].bar(erros_tipo.index, erros_tipo.values,
-                   color=['orange', 'purple'])
-    axes[2, 1].set_title("Contagem dos Tipos de Erros",
-                         fontsize=14, color="#20B2AA")
-    axes[2, 1].set_xlabel("Tipo de Erro", fontsize=12, color="#20B2AA")
-    axes[2, 1].set_ylabel("Contagem", fontsize=12, color="#20B2AA")
-else:
-    axes[2, 1].text(0.5, 0.5, "Nenhum erro encontrado", fontsize=12, color="#20B2AA",
-                    ha='center', va='center')
+axes[2, 1].bar(erros_tipo.index, erros_tipo.values,
+               color=['orange', 'purple'])
+axes[2, 1].set_title("Contagem dos Tipos de Erros",
+                     fontsize=14, color="#20B2AA")
+axes[2, 1].set_xlabel("Tipo de Erro", fontsize=12, color="#20B2AA")
+axes[2, 1].set_ylabel("Contagem", fontsize=12, color="#20B2AA")
 
 
 plt.show()
+
+# O mais preocupante é o resultado do último gráfico pois mostra que tem bem mais erros do tipo falso negativo do que falso positivo
+# o que pode indicar que ele pode dar resultado negativo mesmo quando a imagem é maligno.
